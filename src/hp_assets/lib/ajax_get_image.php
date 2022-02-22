@@ -66,8 +66,12 @@
     $image_user_url  = $json['user']['links']['html'];
 
     echo json_encode(array('success' => 1, 'url' => $image_url, 'image_user_name' => $image_user_name, 'image_user_url' => $image_user_url));
-  } else if (!empty($config['protected']['local_img'])) {
+  } else if (!empty($config['protected']['local_img'])) { // Local image
     $path = $config['protected']['local_img'];
+    // Add leading / if missing
+    if (!strcmp(substr($path, 0), "/") {
+      $path = "/" . $path;
+    }
     $image_url = get_current_url() . $path;
     echo json_encode(array('success' => 1, 'url' => $image_url));
   }
