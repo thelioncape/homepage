@@ -67,9 +67,9 @@
 
     echo json_encode(array('success' => 1, 'url' => $image_url, 'image_user_name' => $image_user_name, 'image_user_url' => $image_user_url));
   } else if (!empty($config['protected']['local_img'])) {
-    $path = $config['protected']['local_img']
-    $image_url = get_current_url() . $path
-    echo json_encode(array('success' => 1, 'url' => $image_url))
+    $path = $config['protected']['local_img'];
+    $image_url = get_current_url() . $path;
+    echo json_encode(array('success' => 1, 'url' => $image_url));
   }
 
   die();
