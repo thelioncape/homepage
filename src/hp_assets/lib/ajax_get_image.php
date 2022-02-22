@@ -69,7 +69,7 @@
   } else if (!empty($config['protected']['local_img'])) { // Local image
     $path = $config['protected']['local_img'];
     // Add leading / if missing
-    if (!strcmp(substr($path, 0), "/") {
+    if (!strcmp(substr($path, 0), "/")) {
       $path = "/" . $path;
     }
     $image_url = get_current_url() . $path;
