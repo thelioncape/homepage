@@ -57,7 +57,7 @@ __NOTE__: There [have been reports](https://github.com/tomershvueli/homepage/iss
 
 ## Supporting
 
-If you enjoy homepage and want to support the project, you can buy me a Ko-Fi! 
+If you enjoy homepage and want to support the project, support the original author here! 
 
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/D1D41JRJE)
 
