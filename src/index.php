@@ -73,7 +73,8 @@
           }
           
           $link = str_replace("{{cur}}", get_current_url(), $item['link']);
-          $target = $item['new_tab'] ? " target=\"_blank\" rel=\"noopener noreferrer\"" : "";
+
+          $target = isset($item['new_tab']) && $item['new_tab'] ? " target=\"_blank\" rel=\"noopener noreferrer\"" : "";
 
           echo "<div class=\"link col-md-4 col-sm-6 col-xs-12\"><a href=\"{$link}\" title=\"{$item['alt']}\"{$target}>{$icon_or_img}</a></div>";
         }
