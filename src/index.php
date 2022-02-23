@@ -57,7 +57,16 @@
     <main id="links-wrap" class="menu-item bg">
       <?php
         foreach ($config['items'] as $i => $item) {
-          $icon_or_img = $item['icon'] ? "<i class=\"fa fa-{$item['icon']}\"></i>" : "<img src=\"hp_assets/img/{$item['img']}\" height=\"80\" width=\"80\" alt=\"{$item['alt']}\" loading=\"lazy\" />";
+          if (!empty($item['icon'])) {
+            if ($item['iconpack'] == "iconify") { // iconify pack selected
+              $icon_or_img = "<span class=\"iconify\" data-icon=\"{$item['icon']}\"></span>";
+            } else if (strcmp($item['iconpack'], "fontawesome")) { // fontawesome pack selected
+              $icon_or_img = "<i class=\"fa fa-{$item['icon']}\"></i>"
+            }
+          } else { // image selected
+            $icon_or_img = "<img src=\"hp_assets/img/{$item['img']}\" height=\"80\" width=\"80\" alt=\"{$item['alt']}\" loading=\"lazy\" />";
+          }
+          
           $link = str_replace("{{cur}}", get_current_url(), $item['link']);
           $target = $item['new_tab'] ? " target=\"_blank\" rel=\"noopener noreferrer\"" : "";
 
@@ -70,6 +79,7 @@
       <span id="pic-info">Picture by <a href="#" id="pic-info-url"></a> / <a href="https://unsplash.com/?utm_source=homepage&amp;utm_medium=referral">Unsplash</a></span>
     </div>
 
+    <script src="https://code.iconify.design/2/2.1.2/iconify.min.js"></script>
     <script type="text/javascript" src="hp_assets/js/jquery.min.js"></script>
     <script type="text/javascript" src="hp_assets/js/mousetrap.min.js"></script>
     <script type="text/javascript">

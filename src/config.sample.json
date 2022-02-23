@@ -9,34 +9,40 @@
   "items" : [
     {
       "alt" : "Facebook",
+      "iconpack": "fontawesome",
       "icon" : "facebook",
       "link" : "http://facebook.com",
       "new_tab" : true
     },
     {
       "alt" : "Twitter",
+      "iconpack": "fontawesome",
       "icon" : "twitter",
       "link" : "http://twitter.com",
       "new_tab" : true
     },
     {
       "alt" : "Trello",
+      "iconpack": "fontawesome",
       "icon" : "trello",
       "link" : "http://trello.com",
       "new_tab" : true
     },
     {
       "alt" : "TTRSS",
+      "iconpack": "fontawesome",
       "icon" : "rss",
       "link" : "{{cur}}/ttrss"
     },
     {
       "alt" : "phpMyAdmin",
+      "iconpack": "fontawesome",
       "icon" : "database",
       "link" : "{{cur}}:3306/phpMyAdmin"
     },
     {
       "alt" : "Plex",
+      "iconpack": "fontawesome",
       "icon" : "film",
       "link" : "{{cur}}:32400/web/"
     }
