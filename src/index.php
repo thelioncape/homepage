@@ -61,6 +61,8 @@
             if (array_key_exists('iconpack', $item)) {
               if ($item['iconpack'] == "iconify") { // iconify pack selected
                 $icon_or_img = "<span class=\"iconify\" data-icon=\"{$item['icon']}\"></span>";
+              } else { // fallback to fontawesome for backwards compatibility
+                $icon_or_img = "<i class=\"fa fa-{$item['icon']}\"></i>";
               }
             } else { // fallback to fontawesome for backwards compatibility
               $icon_or_img = "<i class=\"fa fa-{$item['icon']}\"></i>";
