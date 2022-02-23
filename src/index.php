@@ -58,11 +58,14 @@
       <?php
         foreach ($config['items'] as $i => $item) {
           if (!empty($item['icon'])) {
-            if ($item['iconpack'] == "iconify") { // iconify pack selected
-              $icon_or_img = "<span class=\"iconify\" data-icon=\"{$item['icon']}\"></span>";
-            } else if (strcmp($item['iconpack'], "fontawesome")) { // fontawesome pack selected
-              $icon_or_img = "<i class=\"fa fa-{$item['icon']}\"></i>"
+            if (array_key_exists('iconpack', $item)) {
+              if ($item['iconpack'] == "iconify") { // iconify pack selected
+                $icon_or_img = "<span class=\"iconify\" data-icon=\"{$item['icon']}\"></span>";
+              }
+            } else { // fallback to fontawesome for backwards compatibility
+              $icon_or_img = "<i class=\"fa fa-{$item['icon']}\"></i>";
             }
+
           } else { // image selected
             $icon_or_img = "<img src=\"hp_assets/img/{$item['img']}\" height=\"80\" width=\"80\" alt=\"{$item['alt']}\" loading=\"lazy\" />";
           }
